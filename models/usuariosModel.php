@@ -1,5 +1,5 @@
 <?php
-class UsuariosModel extends Database
+class UsuariosModel extends Sqlite
 {
     function __construct()
     {
@@ -7,6 +7,6 @@ class UsuariosModel extends Database
     }
     public function obtenerTodosUsuarios()
     {
-        return $this->getData("SELECT * FROM tbl_usuarios WHERE 1");
+        return $this->getData("SELECT * FROM usuarios WHERE 1");
     }
 }
