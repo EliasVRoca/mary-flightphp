@@ -1,5 +1,8 @@
 <?php
-class Maincontroller
+
+use Kint\Kint;
+
+class MainController
 {
     public function __construct()
     {
@@ -7,9 +10,9 @@ class Maincontroller
 
     public function main()
     {
-        echo 'Hola mundo put';
-    }
-    public function delete(){
-        echo 'ELIMINAR';
+        echo blade()->run('welcome');
+        // $users = new UsuariosModel();
+        // $res =  $users->obtenerTodosUsuarios();
+        // Kint::dump($res);
     }
 }
